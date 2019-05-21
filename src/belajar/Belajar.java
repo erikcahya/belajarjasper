@@ -27,7 +27,7 @@ public class Belajar {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-         report("src/erik.jasper");
+         report("erik",100);
          
          /**
           * untuk memanggil hasil report jasper yang ada di file jasper
@@ -49,20 +49,65 @@ public class Belajar {
 /**
  * menampilkan berdasarkan nama file
  */
-    public static void report(String namafile) {
+//    public static void report(String namafile) {
+//        DBConnection connection = new DBConnection();
+//        try {
+//            
+//            String namafile1 = "src/"+namafile+".jasper" ;
+//            File report = new File(namafile);
+//            JasperReport jr = (JasperReport) JRLoader.loadObject(report);
+////            HashMap parameter = new HashMap();
+////            parameter.clear();
+////        parameter.put("kecamatan",report.getText());
+//            JasperPrint jp = JasperFillManager.fillReport(jr, null, connection.getConnection());
+//            JasperViewer.viewReport(jp, false);
+//        } catch (Exception e) {
+//            JOptionPane.showMessageDialog(null, "Gagal");
+//        }
+//}
+    /**
+     * fungsi report berdasarkan dimana nama file yang akan di panggil bisa di sesuaikan sesuai parameter yang dipanggil
+     * @param namafile 
+     */
+//   public static void report(String namafile) {
+//        DBConnection connection = new DBConnection();
+//        try {
+//            
+//            String namafile1 = "src/"+namafile+".jasper" ;
+//            File report = new File(namafile);
+//            JasperReport jr = (JasperReport) JRLoader.loadObject(report);
+////            HashMap parameter = new HashMap();
+////            parameter.clear();
+////        parameter.put("kecamatan",report.getText());
+//            JasperPrint jp = JasperFillManager.fillReport(jr, null, connection.getConnection());
+//            JasperViewer.viewReport(jp, false);
+//        } catch (Exception e) {
+//            JOptionPane.showMessageDialog(null, "Gagal");
+//        }
+//}
+ 
+   /**
+    * fungsi report berdasarkan dimana nama file yang akan di panggil bisa di sesuaikan sesuai parameter yang dipanggil dan juga ada tambahan bisa disesuaikan query nya
+    * @param file
+    * @param employee_id 
+    */
+   static void report(String file, int employee_id) {
         DBConnection connection = new DBConnection();
+
         try {
-            String namafile1 = "src/"+namafile+".jasper" ;
+            String namafile = "src/" + file + ".jasper";
             File report = new File(namafile);
             JasperReport jr = (JasperReport) JRLoader.loadObject(report);
-//            HashMap parameter = new HashMap();
-//            parameter.clear();
-//        parameter.put("kecamatan",report.getText());
-            JasperPrint jp = JasperFillManager.fillReport(jr, null, connection.getConnection());
-            JasperViewer.viewReport(jp, false);
+            HashMap parameter = new HashMap();
+            parameter.put("employee_id", employee_id);
+            JasperPrint jp = JasperFillManager.fillReport(jr, parameter, connection.getConnection());
+            JasperViewer.viewReport(jp);
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "Gagal");
         }
-}
+    }
+
+    
+
 }    
 
