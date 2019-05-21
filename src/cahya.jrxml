@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="c48a1c91-165f-4e38-a7f4-18dc2f99112f">
+	<style name="Title" fontName="Arial" fontSize="26" isBold="true" pdfFontName="Helvetica-Bold"/>
+	<style name="SubTitle" forecolor="#666666" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     LOCATIONS."LOCATION_ID" AS LOCATIONS_LOCATION_ID,
+     LOCATIONS."STREET_ADDRESS" AS LOCATIONS_STREET_ADDRESS,
+     LOCATIONS."POSTAL_CODE" AS LOCATIONS_POSTAL_CODE,
+     LOCATIONS."CITY" AS LOCATIONS_CITY,
+     LOCATIONS."STATE_PROVINCE" AS LOCATIONS_STATE_PROVINCE,
+     LOCATIONS."COUNTRY_ID" AS LOCATIONS_COUNTRY_ID
+FROM
+     "HR"."LOCATIONS" LOCATIONS]]>
+	</queryString>
+	<field name="LOCATIONS_LOCATION_ID" class="java.math.BigDecimal"/>
+	<field name="LOCATIONS_STREET_ADDRESS" class="java.lang.String"/>
+	<field name="LOCATIONS_POSTAL_CODE" class="java.lang.String"/>
+	<field name="LOCATIONS_CITY" class="java.lang.String"/>
+	<field name="LOCATIONS_STATE_PROVINCE" class="java.lang.String"/>
+	<field name="LOCATIONS_COUNTRY_ID" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="70" splitType="Stretch">
+			<image>
+				<reportElement uuid="674e0753-ecf9-4263-adfb-e81376b2c2be" x="275" y="0" width="300" height="64"/>
+				<imageExpression><![CDATA["leaf_banner_green.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement uuid="85407167-30cd-4517-a1c1-eca42935b3f3" style="Title" x="0" y="13" width="263" height="33"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Leaf Green Title]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="586aac0c-5775-4f69-852c-0111b4c7a88c" style="SubTitle" x="100" y="46" width="174" height="22"/>
+				<textElement/>
+				<text><![CDATA[Leaf Green SubTitle]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="36" splitType="Stretch">
+			<line>
+				<reportElement uuid="6e540475-7cf4-446f-b2a7-2fdcd2672dae" positionType="FixRelativeToBottom" x="0" y="35" width="555" height="1"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement uuid="0727cc69-5874-42dd-b39c-95efe8621a3b" style="Column header" x="0" y="19" width="92" height="15"/>
+				<textElement/>
+				<text><![CDATA[LOCATIONS_LOCATION_ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="1e462316-c806-476d-b084-966f6a38feeb" style="Column header" x="92" y="19" width="92" height="15"/>
+				<textElement/>
+				<text><![CDATA[LOCATIONS_STREET_ADDRESS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="db6f89ff-0389-4333-84d6-cb95636407ef" style="Column header" x="184" y="19" width="92" height="15"/>
+				<textElement/>
+				<text><![CDATA[LOCATIONS_POSTAL_CODE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="5e6b7e92-29ae-416d-b72f-f5fccfe2648b" style="Column header" x="276" y="19" width="92" height="15"/>
+				<textElement/>
+				<text><![CDATA[LOCATIONS_CITY]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="d4d135ec-0b77-411a-97f8-646e2fbde138" style="Column header" x="368" y="19" width="92" height="15"/>
+				<textElement/>
+				<text><![CDATA[LOCATIONS_STATE_PROVINCE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="98813b18-1d33-4e3d-8b89-29acdbee1693" style="Column header" x="460" y="19" width="92" height="15"/>
+				<textElement/>
+				<text><![CDATA[LOCATIONS_COUNTRY_ID]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="16" splitType="Stretch">
+			<line>
+				<reportElement uuid="05e30ba7-190a-425b-9e80-795d602593d0" positionType="FixRelativeToBottom" x="0" y="15" width="555" height="1"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement uuid="fffbdf00-8591-460e-abc8-b698ead62408" style="Detail" x="0" y="0" width="92" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{LOCATIONS_LOCATION_ID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="b30bdc1b-62e6-43aa-a22d-4649cbed722e" style="Detail" x="92" y="0" width="92" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{LOCATIONS_STREET_ADDRESS}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="a9473a77-08bb-4606-bc38-40419cc52fa9" style="Detail" x="184" y="0" width="92" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{LOCATIONS_POSTAL_CODE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="eae264ca-1531-4ea9-be1a-04e4cd0415a8" style="Detail" x="276" y="0" width="92" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{LOCATIONS_CITY}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="24c1c733-a98a-4cf0-b44d-a0467ebdd5ab" style="Detail" x="368" y="0" width="92" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{LOCATIONS_STATE_PROVINCE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="6b423d2e-9aef-466f-8bc0-7ce3a2fecff3" style="Detail" x="460" y="0" width="92" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{LOCATIONS_COUNTRY_ID}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch">
+			<line>
+				<reportElement uuid="53e9ab0b-13e9-4361-90ab-ea5120867b27" positionType="FixRelativeToBottom" x="0" y="3" width="555" height="1"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement uuid="914d5ec4-8495-4c7b-888e-8022ea9589f1" style="Column header" x="433" y="0" width="80" height="20"/>
+				<textElement textAlignment="Right">
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement uuid="c5bde4ed-ad95-44b8-9ff6-dfc9b7d34531" style="Column header" x="513" y="0" width="40" height="20"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement uuid="96f00252-6bbb-454e-831d-b15cd91088ab" style="Column header" x="0" y="0" width="197" height="20"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

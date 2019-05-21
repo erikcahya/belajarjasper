@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="df88c97e-66a7-4305-a259-d51116120b2d">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="EMPLOYEE_ID" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[SELECT
+     EMPLOYEES."EMPLOYEE_ID" AS EMPLOYEES_EMPLOYEE_ID,
+     EMPLOYEES."FIRST_NAME" AS EMPLOYEES_FIRST_NAME,
+     EMPLOYEES."LAST_NAME" AS EMPLOYEES_LAST_NAME,
+     EMPLOYEES."EMAIL" AS EMPLOYEES_EMAIL,
+     EMPLOYEES."PHONE_NUMBER" AS EMPLOYEES_PHONE_NUMBER,
+     EMPLOYEES."HIRE_DATE" AS EMPLOYEES_HIRE_DATE,
+     EMPLOYEES."JOB_ID" AS EMPLOYEES_JOB_ID,
+     EMPLOYEES."SALARY" AS EMPLOYEES_SALARY,
+     EMPLOYEES."COMMISSION_PCT" AS EMPLOYEES_COMMISSION_PCT,
+     EMPLOYEES."MANAGER_ID" AS EMPLOYEES_MANAGER_ID,
+     EMPLOYEES."DEPARTMENT_ID" AS EMPLOYEES_DEPARTMENT_ID
+FROM
+     "HR"."EMPLOYEES" EMPLOYEES
+WHERE EMPLOYEE_ID = $P{EMPLOYEE_ID}]]>
+	</queryString>
+	<field name="EMPLOYEES_EMPLOYEE_ID" class="java.math.BigDecimal"/>
+	<field name="EMPLOYEES_FIRST_NAME" class="java.lang.String"/>
+	<field name="EMPLOYEES_LAST_NAME" class="java.lang.String"/>
+	<field name="EMPLOYEES_EMAIL" class="java.lang.String"/>
+	<field name="EMPLOYEES_PHONE_NUMBER" class="java.lang.String"/>
+	<field name="EMPLOYEES_HIRE_DATE" class="java.sql.Timestamp"/>
+	<field name="EMPLOYEES_JOB_ID" class="java.lang.String"/>
+	<field name="EMPLOYEES_SALARY" class="java.math.BigDecimal"/>
+	<field name="EMPLOYEES_COMMISSION_PCT" class="java.math.BigDecimal"/>
+	<field name="EMPLOYEES_MANAGER_ID" class="java.math.BigDecimal"/>
+	<field name="EMPLOYEES_DEPARTMENT_ID" class="java.math.BigDecimal"/>
+	<background>
+		<band/>
+	</background>
+	<title>
+		<band height="72">
+			<frame>
+				<reportElement uuid="b5e77a64-4f8a-4e14-bef0-4233b9e7a0f7" mode="Opaque" x="-20" y="-20" width="595" height="92" backcolor="#006699"/>
+				<staticText>
+					<reportElement uuid="1ebc4d3d-4b91-451c-9321-16f16e2bbec8" x="20" y="20" width="234" height="43" forecolor="#FFFFFF"/>
+					<textElement>
+						<font size="34" isBold="true"/>
+					</textElement>
+					<text><![CDATA[TITLE]]></text>
+				</staticText>
+				<staticText>
+					<reportElement uuid="78065916-0968-4e5a-9a45-a74b8ee26512" x="395" y="43" width="180" height="20" forecolor="#FFFFFF"/>
+					<textElement textAlignment="Right">
+						<font size="14" isBold="false"/>
+					</textElement>
+					<text><![CDATA[Add a description here]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="13"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="21">
+			<line>
+				<reportElement uuid="ff6f2a2f-78ab-4445-9c4c-8132a00d4e7d" x="-20" y="20" width="595" height="1" forecolor="#666666"/>
+			</line>
+			<staticText>
+				<reportElement uuid="d38e1f85-95e7-4d41-91f3-ab2c39b640a9" mode="Opaque" x="0" y="0" width="50" height="20" forecolor="#006699" backcolor="#E6E6E6"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[EMPLOYEES_EMPLOYEE_ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="b66efbbd-c60a-4c9c-938b-143f87e27e7c" mode="Opaque" x="50" y="0" width="50" height="20" forecolor="#006699" backcolor="#E6E6E6"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[EMPLOYEES_FIRST_NAME]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="21272789-9966-45b2-bdcc-3694fc96daa1" mode="Opaque" x="100" y="0" width="50" height="20" forecolor="#006699" backcolor="#E6E6E6"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[EMPLOYEES_LAST_NAME]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="8e28ee0d-ee21-4579-9f37-228561a3025a" mode="Opaque" x="150" y="0" width="50" height="20" forecolor="#006699" backcolor="#E6E6E6"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[EMPLOYEES_EMAIL]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="721728c4-12b9-473e-907d-20f701761fb2" mode="Opaque" x="200" y="0" width="50" height="20" forecolor="#006699" backcolor="#E6E6E6"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[EMPLOYEES_PHONE_NUMBER]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="df23e3a5-bcb6-4de8-9e90-0a6c21fd4c6c" mode="Opaque" x="250" y="0" width="50" height="20" forecolor="#006699" backcolor="#E6E6E6"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[EMPLOYEES_HIRE_DATE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="3c161cb9-cd03-48ab-afa2-052c19997b65" mode="Opaque" x="300" y="0" width="50" height="20" forecolor="#006699" backcolor="#E6E6E6"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[EMPLOYEES_JOB_ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="0d030696-4822-4ec7-b0ca-072608563895" mode="Opaque" x="350" y="0" width="50" height="20" forecolor="#006699" backcolor="#E6E6E6"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[EMPLOYEES_SALARY]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="25b82eb0-bfe6-4d4f-81ef-50030dce4743" mode="Opaque" x="400" y="0" width="50" height="20" forecolor="#006699" backcolor="#E6E6E6"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[EMPLOYEES_COMMISSION_PCT]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="bfda110b-555b-4c43-af41-004d8a9681f7" mode="Opaque" x="450" y="0" width="50" height="20" forecolor="#006699" backcolor="#E6E6E6"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[EMPLOYEES_MANAGER_ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="15e68e28-d296-4243-87d2-e06a06d19f2c" mode="Opaque" x="500" y="0" width="50" height="20" forecolor="#006699" backcolor="#E6E6E6"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[EMPLOYEES_DEPARTMENT_ID]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20">
+			<line>
+				<reportElement uuid="2681ae02-6fba-4fe2-8e72-e2fc58fb8690" positionType="FixRelativeToBottom" x="0" y="19" width="555" height="1"/>
+			</line>
+			<textField isStretchWithOverflow="true">
+				<reportElement uuid="4e93d183-3252-4b9e-8df3-c02a2b846d54" x="0" y="0" width="50" height="20"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{EMPLOYEES_EMPLOYEE_ID}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement uuid="53834888-f745-4f9c-b324-823f2ab4cfe6" x="50" y="0" width="50" height="20"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{EMPLOYEES_FIRST_NAME}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement uuid="8dd8da18-c116-4fd0-a97a-61e34cb587c7" x="100" y="0" width="50" height="20"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{EMPLOYEES_LAST_NAME}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement uuid="258df3e1-d867-4d0e-b938-746973d79f8a" x="150" y="0" width="50" height="20"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{EMPLOYEES_EMAIL}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement uuid="a9ae2a98-ad5c-4a10-bc68-1d6c275fc58f" x="200" y="0" width="50" height="20"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{EMPLOYEES_PHONE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement uuid="84d95592-3cbd-481f-855c-e74439f9f153" x="250" y="0" width="50" height="20"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{EMPLOYEES_HIRE_DATE}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement uuid="d289dad2-5baf-4185-981e-a3600e8796d8" x="300" y="0" width="50" height="20"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{EMPLOYEES_JOB_ID}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement uuid="3193cf04-4f2b-42af-a482-62d1a3ae262c" x="350" y="0" width="50" height="20"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{EMPLOYEES_SALARY}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement uuid="367064c9-9d1b-421b-85cb-ae5380a71e3f" x="400" y="0" width="50" height="20"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{EMPLOYEES_COMMISSION_PCT}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement uuid="63f38a0b-3659-4cd1-83d5-ffbf688e3bb6" x="450" y="0" width="50" height="20"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{EMPLOYEES_MANAGER_ID}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement uuid="a5ec0c4b-664b-4e03-9572-c06925afbd5a" x="500" y="0" width="50" height="20"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{EMPLOYEES_DEPARTMENT_ID}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band/>
+	</columnFooter>
+	<pageFooter>
+		<band height="17">
+			<textField>
+				<reportElement uuid="5bd0bb60-cefb-4242-a22e-9ee069e3be33" mode="Opaque" x="0" y="4" width="515" height="13" backcolor="#E6E6E6"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement uuid="e505c07b-7fea-4189-aef3-7e7abd23581d" mode="Opaque" x="515" y="4" width="40" height="13" backcolor="#E6E6E6"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement uuid="f0d69d7a-1d12-4e7e-9995-73cf50d4da90" x="0" y="4" width="100" height="13"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band/>
+	</summary>
+</jasperReport>
